@@ -1,0 +1,5 @@
+#!/bin/bash
+
+python -m timeit -s 'from hello_Cython.primes_python import primes_python' 'primes_python(1000)'
+python -m timeit -s 'from hello_Cython.example_py_cy import primes_python_compiled' 'primes_python_compiled(1000)'
+python -m timeit -s 'from hello_Cython.primes import primes' 'primes(1000)'
