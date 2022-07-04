@@ -3,6 +3,8 @@ from time import time
 
 from hello_Cython.example_py_cy import primes_python_compiled
 from hello_Cython.primes import primes
+
+# from hello_Cython.primes_plus_plus import primes_plus_plus
 from hello_Cython.primes_python import primes_python
 
 
@@ -29,6 +31,11 @@ def call_p():
 def call_ppc():
     ppc = primes_python_compiled(1000)
     print(f"{sum(ppc)=}")
+
+# @timer
+# def call_p_plus_plus():
+#     p = primes_plus_plus(1000)
+#     print(f"  {sum(p)=}")
 
 call_pp()
 call_p()
